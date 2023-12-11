@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lableable: one
+  lableable_type: Lableable
+
+two:
+  name: MyString
+  lableable: two
+  lableable_type: Lableable

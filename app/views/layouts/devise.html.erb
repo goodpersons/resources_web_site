@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ResourcesWebSite</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <main>
+        <div class="fixed right-0 w-18">
+            <% if flash[:alert].present? %>
+                <div
+                class="alert flex overflow-hidden rounded-lg bg-secondary/10 text-secondary dark:bg-secondary-light/15 dark:text-secondary-light"
+                >
+                <div class="w-1.5 bg-secondary"></div>
+                <div class="p-4"><%= flash[:alert] %></div>
+                </div>
+            <% end %>
+        </div>
+        <%= yield %>
+    </main>
+  </body>
+</html>
